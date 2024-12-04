@@ -1,13 +1,24 @@
 #!/bin/bash
 
-# Menampilkan pengenal dengan animasi masuk
-clear
-echo -e "\e[1;34m------------------------------------------------------------\e[0m"
-echo -e "\e[1;36m    Auto Install Blueprint Theme Pterodactyl by IndoLife   \e[0m"
-echo -e "\e[1;34m------------------------------------------------------------\e[0m"
-echo -e "\e[1;32m        √ Auto Install | √ Mudah | √ Cepat | √ Support All Panel \e[0m"
-echo -e "\e[1;34m------------------------------------------------------------\e[0m"
-sleep 1
+# Animasi pembukaan
+animasi_pembukaan() {
+  clear
+  for i in {1..3}; do
+    echo -e "\e[1;36mLoading"
+    sleep 0.2
+    echo -e "\e[1;36mLoading.\e[0m"
+    sleep 0.2
+    echo -e "\e[1;36mLoading..\e[0m"
+    sleep 0.2
+    echo -e "\e[1;36mLoading...\e[0m"
+    sleep 0.2
+    clear
+  done
+  echo -e "\e[1;34m------------------------------------------------------------\e[0m"
+  echo -e "\e[1;36m   Welcome to Auto Install Blueprint Theme by IndoLife   \e[0m"
+  echo -e "\e[1;34m------------------------------------------------------------\e[0m"
+  sleep 1
+}
 
 # Fungsi instalasi tema
 install_theme() {
@@ -24,10 +35,10 @@ install_theme() {
 
   # Clone repository
   echo -e "\e[1;32mMengunduh repository tema...\e[0m"
-  git clone "$REPO_URL" || { echo "Gagal mengunduh repository."; exit 1; }
+  git clone "$REPO_URL" || { echo -e "\e[1;31mGagal mengunduh repository.\e[0m"; exit 1; }
 
   # Masuk ke direktori repository
-  cd theme || { echo "Gagal masuk ke direktori repository"; exit 1; }
+  cd theme || { echo -e "\e[1;31mGagal masuk ke direktori repository\e[0m"; exit 1; }
 
   # Periksa file ZIP
   if [ ! -f "$ZIP_NAME" ]; then
@@ -37,11 +48,14 @@ install_theme() {
 
   # Pindahkan dan ekstrak file
   sudo mv "$ZIP_NAME" "$INSTALL_DIR"
-  cd "$INSTALL_DIR" || { echo "Gagal masuk ke direktori $INSTALL_DIR"; exit 1; }
+  cd "$INSTALL_DIR" || { echo -e "\e[1;31mGagal masuk ke direktori $INSTALL_DIR\e[0m"; exit 1; }
   sudo unzip -o "$ZIP_NAME"
   sudo rm "$ZIP_NAME"
 
   echo -e "\e[1;32mTema $THEME_NAME berhasil diinstal!\e[0m"
+  echo -e "\e[1;36mKembali ke menu utama...\e[0m"
+  sleep 2
+  menu_utama
 }
 
 # Fungsi instalasi blueprint framework
@@ -57,7 +71,7 @@ install_blueprint() {
   sudo apt-get install -y nodejs
 
   # Instalasi di direktori Pterodactyl
-  cd /var/www/pterodactyl || { echo "Gagal masuk ke direktori Pterodactyl"; exit 1; }
+  cd /var/www/pterodactyl || { echo -e "\e[1;31mGagal masuk ke direktori Pterodactyl\e[0m"; exit 1; }
   sudo yarn
   sudo yarn add cross-env
 
@@ -68,10 +82,14 @@ install_blueprint() {
   sudo rm release.zip
 
   echo -e "\e[1;32mInstalasi Blueprint Framework selesai!\e[0m"
+  echo -e "\e[1;36mKembali ke menu utama...\e[0m"
+  sleep 2
+  menu_utama
 }
 
 # Menu utama
 menu_utama() {
+  clear
   echo -e "\e[1;34m------------------------------------------------------------\e[0m"
   echo -e "\e[1;35m    Pilih komponen yang ingin diinstal: \e[0m"
   echo -e "\e[1;33m    1. Install Blueprint\e[0m"
@@ -110,5 +128,6 @@ menu_utama() {
   esac
 }
 
-# Jalankan menu utama
+# Jalankan animasi pembukaan dan menu utama
+animasi_pembukaan
 menu_utama
