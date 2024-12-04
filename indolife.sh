@@ -94,7 +94,7 @@ menu_utama() {
       sleep 1
 
       # Clone repository tema
-      git clone https://github.com/indolifemd/theme.git
+      git clone https://github.com/indolifemd/theme/blob/db7b984bf946ddaa5eeba460c94d5edeb9f071d3/nebulaslatev2.zip
       cd theme || { echo "Gagal masuk ke direktori theme"; exit 1; }
 
       # Pindahkan file ZIP ke direktori Pterodactyl
@@ -124,7 +124,7 @@ menu_utama() {
       sleep 1
 
       # Clone repository tema
-      git clone https://github.com/indolifemd/theme.git
+      git clone https://github.com/indolifemd/theme/blob/db7b984bf946ddaa5eeba460c94d5edeb9f071d3/nebulaslatev2.zip
       cd theme || { echo "Gagal masuk ke direktori theme"; exit 1; }
 
       # Pindahkan file ZIP ke direktori Pterodactyl
@@ -154,7 +154,7 @@ menu_utama() {
       sleep 1
       
       # Clone repository tema
-      git clone https://github.com/indolifemd/theme.git
+      git clone https://github.com/indolifemd/theme/blob/db7b984bf946ddaa5eeba460c94d5edeb9f071d3/nebulaslatev2.zip
       cd theme || { echo "Gagal masuk ke direktori theme"; exit 1; }
 
       # Pindahkan file ZIP ke direktori Pterodactyl
@@ -180,7 +180,7 @@ menu_utama() {
       sleep 1
 
       # Clone repository tema
-      git clone https://github.com/indolifemd/theme.git
+      git clone https://github.com/indolifemd/theme/blob/db7b984bf946ddaa5eeba460c94d5edeb9f071d3/nebulaslatev2.zip
       cd theme || { echo "Gagal masuk ke direktori theme"; exit 1; }
 
       # Pindahkan file ZIP ke direktori Pterodactyl
@@ -206,7 +206,7 @@ menu_utama() {
       sleep 1
       
       # Clone repository tema
-      git clone https://github.com/indolifemd/theme.git
+      git clone https://github.com/indolifemd/theme/blob/db7b984bf946ddaa5eeba460c94d5edeb9f071d3/nebulaslatev2.zip
       cd theme || { echo "Gagal masuk ke direktori theme"; exit 1; }
 
       # Pindahkan file ZIP ke direktori Pterodactyl
@@ -232,7 +232,7 @@ menu_utama() {
       sleep 1
 
       # Clone repository tema
-      git clone https://github.com/indolifemd/theme.git
+      git clone https://github.com/indolifemd/theme/blob/db7b984bf946ddaa5eeba460c94d5edeb9f071d3/nebulaslatev2.zip
       cd theme || { echo "Gagal masuk ke direktori theme"; exit 1; }
 
       # Pindahkan file ZIP ke direktori Pterodactyl
@@ -258,7 +258,7 @@ menu_utama() {
       sleep 1
 
       # Clone repository tema
-      git clone https://github.com/indolifemd/theme.git
+      git clone https://github.com/indolifemd/theme/blob/db7b984bf946ddaa5eeba460c94d5edeb9f071d3/nebulaslatev2.zip
       cd theme || { echo "Gagal masuk ke direktori theme"; exit 1; }
 
       # Pindahkan file ZIP ke direktori Pterodactyl
@@ -284,7 +284,7 @@ menu_utama() {
       sleep 1
 
       # Clone repository tema
-      git clone https://github.com/indolifemd/theme.git
+      git clone https://github.com/indolifemd/theme/blob/db7b984bf946ddaa5eeba460c94d5edeb9f071d3/nebulaslatev2.zip
       cd theme || { echo "Gagal masuk ke direktori theme"; exit 1; }
 
       # Pindahkan file ZIP ke direktori Pterodactyl
@@ -310,7 +310,7 @@ menu_utama() {
       sleep 1
 
       # Clone repository tema
-      git clone https://github.com/indolifemd/theme.git
+      git clone https://github.com/indolifemd/theme/blob/db7b984bf946ddaa5eeba460c94d5edeb9f071d3/nebulaslatev2.zip
       cd theme || { echo "Gagal masuk ke direktori theme"; exit 1; }
 
       # Pindahkan file ZIP ke direktori Pterodactyl
