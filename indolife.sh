@@ -1,16 +1,16 @@
 #!/bin/bash
 
-# Animasi pembukaan
+# Fungsi animasi pembukaan
 animasi_pembukaan() {
   clear
   for i in {1..3}; do
-    echo -e "\e[1;36mLoading"
+    echo -e "\e[1;36mStarting"
     sleep 0.2
-    echo -e "\e[1;36mLoading.\e[0m"
+    echo -e "\e[1;36mStarting.\e[0m"
     sleep 0.2
-    echo -e "\e[1;36mLoading..\e[0m"
+    echo -e "\e[1;36mStarting..\e[0m"
     sleep 0.2
-    echo -e "\e[1;36mLoading...\e[0m"
+    echo -e "\e[1;36mStarting...\e[0m"
     sleep 0.2
     clear
   done
@@ -31,14 +31,14 @@ install_theme() {
 
   # Direktori sementara
   TEMP_DIR=$(mktemp -d)
-  cd "$TEMP_DIR" || { echo "Gagal membuat direktori sementara"; exit 1; }
+  cd "$TEMP_DIR" || { echo -e "\e[1;31mGagal membuat direktori sementara.\e[0m"; exit 1; }
 
   # Clone repository
   echo -e "\e[1;32mMengunduh repository tema...\e[0m"
   git clone "$REPO_URL" || { echo -e "\e[1;31mGagal mengunduh repository.\e[0m"; exit 1; }
 
   # Masuk ke direktori repository
-  cd theme || { echo -e "\e[1;31mGagal masuk ke direktori repository\e[0m"; exit 1; }
+  cd theme || { echo -e "\e[1;31mGagal masuk ke direktori repository.\e[0m"; exit 1; }
 
   # Periksa file ZIP
   if [ ! -f "$ZIP_NAME" ]; then
@@ -48,7 +48,7 @@ install_theme() {
 
   # Pindahkan dan ekstrak file
   sudo mv "$ZIP_NAME" "$INSTALL_DIR"
-  cd "$INSTALL_DIR" || { echo -e "\e[1;31mGagal masuk ke direktori $INSTALL_DIR\e[0m"; exit 1; }
+  cd "$INSTALL_DIR" || { echo -e "\e[1;31mGagal masuk ke direktori $INSTALL_DIR.\e[0m"; exit 1; }
   sudo unzip -o "$ZIP_NAME"
   sudo rm "$ZIP_NAME"
 
@@ -71,7 +71,7 @@ install_blueprint() {
   sudo apt-get install -y nodejs
 
   # Instalasi di direktori Pterodactyl
-  cd /var/www/pterodactyl || { echo -e "\e[1;31mGagal masuk ke direktori Pterodactyl\e[0m"; exit 1; }
+  cd /var/www/pterodactyl || { echo -e "\e[1;31mGagal masuk ke direktori Pterodactyl.\e[0m"; exit 1; }
   sudo yarn
   sudo yarn add cross-env
 
@@ -123,6 +123,7 @@ menu_utama() {
       ;;
     *) 
       echo -e "\e[1;31mPilihan tidak valid. Silakan coba lagi.\e[0m"
+      sleep 2
       menu_utama 
       ;;
   esac
