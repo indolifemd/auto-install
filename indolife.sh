@@ -195,7 +195,7 @@ menu_utama() {
       ls /var/www/pterodactyl
       
       sudo blueprint -i darkenate
-      echo -e "\e[1;32mInstalasi darkenate selesai
+      echo -e "\e[1;32mInstalasi darkenate selesai"
       sleep 1
       menu_utama
       ;;
