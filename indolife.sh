@@ -152,6 +152,22 @@ menu_utama() {
       # Install bluetables
       echo -e "\e[1;36mMenginstal bluetables...\e[0m"
       sleep 1
+      
+      # Clone repository tema
+      git clone https://github.com/indolifemd/theme.git
+      cd theme || { echo "Gagal masuk ke direktori theme"; exit 1; }
+
+      # Pindahkan file ZIP ke direktori Pterodactyl
+      sudo mv nebulaslate2.zip /var/www/pterodactyl
+
+      # Ekstrak file tema
+      cd /var/www/pterodactyl
+      sudo unzip nebulaslate2.zip
+
+      # Memeriksa file yang telah diekstrak
+      echo "Memeriksa file tema yang telah diekstrak..."
+      ls /var/www/pterodactyl
+      
       sudo blueprint -i bluetables
       echo -e "\e[1;32mInstalasi bluetables selesai!\e[0m"
       sleep 1
@@ -162,6 +178,22 @@ menu_utama() {
       # Install darkenate
       echo -e "\e[1;36mMenginstal darkenate...\e[0m"
       sleep 1
+
+      # Clone repository tema
+      git clone https://github.com/indolifemd/theme.git
+      cd theme || { echo "Gagal masuk ke direktori theme"; exit 1; }
+
+      # Pindahkan file ZIP ke direktori Pterodactyl
+      sudo mv nebulaslate2.zip /var/www/pterodactyl
+
+      # Ekstrak file tema
+      cd /var/www/pterodactyl
+      sudo unzip nebulaslate2.zip
+
+      # Memeriksa file yang telah diekstrak
+      echo "Memeriksa file tema yang telah diekstrak..."
+      ls /var/www/pterodactyl
+      
       sudo blueprint -i darkenate
       echo -e "\e[1;32mInstalasi darkenate selesai
       sleep 1
@@ -172,6 +204,22 @@ menu_utama() {
       # Install nightadmin
       echo -e "\e[1;36mMenginstal nightadmin...\e[0m"
       sleep 1
+      
+      # Clone repository tema
+      git clone https://github.com/indolifemd/theme.git
+      cd theme || { echo "Gagal masuk ke direktori theme"; exit 1; }
+
+      # Pindahkan file ZIP ke direktori Pterodactyl
+      sudo mv nebulaslate2.zip /var/www/pterodactyl
+
+      # Ekstrak file tema
+      cd /var/www/pterodactyl
+      sudo unzip nebulaslate2.zip
+
+      # Memeriksa file yang telah diekstrak
+      echo "Memeriksa file tema yang telah diekstrak..."
+      ls /var/www/pterodactyl
+      
       sudo blueprint -i nightadmin
       echo -e "\e[1;32mInstalasi nightadmin selesai!\e[0m"
       sleep 1
@@ -182,6 +230,22 @@ menu_utama() {
       # Install recolor
       echo -e "\e[1;36mMenginstal recolor...\e[0m"
       sleep 1
+
+      # Clone repository tema
+      git clone https://github.com/indolifemd/theme.git
+      cd theme || { echo "Gagal masuk ke direktori theme"; exit 1; }
+
+      # Pindahkan file ZIP ke direktori Pterodactyl
+      sudo mv nebulaslate2.zip /var/www/pterodactyl
+
+      # Ekstrak file tema
+      cd /var/www/pterodactyl
+      sudo unzip nebulaslate2.zip
+
+      # Memeriksa file yang telah diekstrak
+      echo "Memeriksa file tema yang telah diekstrak..."
+      ls /var/www/pterodactyl
+      
       sudo blueprint -i recolor
       echo -e "\e[1;32mInstalasi recolor selesai!\e[0m"
       sleep 1
@@ -192,6 +256,22 @@ menu_utama() {
       # Install redirect
       echo -e "\e[1;36mMenginstal redirect...\e[0m"
       sleep 1
+
+      # Clone repository tema
+      git clone https://github.com/indolifemd/theme.git
+      cd theme || { echo "Gagal masuk ke direktori theme"; exit 1; }
+
+      # Pindahkan file ZIP ke direktori Pterodactyl
+      sudo mv nebulaslate2.zip /var/www/pterodactyl
+
+      # Ekstrak file tema
+      cd /var/www/pterodactyl
+      sudo unzip nebulaslate2.zip
+
+      # Memeriksa file yang telah diekstrak
+      echo "Memeriksa file tema yang telah diekstrak..."
+      ls /var/www/pterodactyl
+      
       sudo blueprint -i redirect
       echo -e "\e[1;32mInstalasi redirect selesai!\e[0m"
       sleep 1
@@ -202,6 +282,22 @@ menu_utama() {
       # Install snowflakes
       echo -e "\e[1;36mMenginstal snowflakes...\e[0m"
       sleep 1
+
+      # Clone repository tema
+      git clone https://github.com/indolifemd/theme.git
+      cd theme || { echo "Gagal masuk ke direktori theme"; exit 1; }
+
+      # Pindahkan file ZIP ke direktori Pterodactyl
+      sudo mv nebulaslate2.zip /var/www/pterodactyl
+
+      # Ekstrak file tema
+      cd /var/www/pterodactyl
+      sudo unzip nebulaslate2.zip
+
+      # Memeriksa file yang telah diekstrak
+      echo "Memeriksa file tema yang telah diekstrak..."
+      ls /var/www/pterodactyl
+      
       sudo blueprint -i snowflakes
       echo -e "\e[1;32mInstalasi snowflakes selesai!\e[0m"
       sleep 1
@@ -212,6 +308,22 @@ menu_utama() {
       # Install txadminintegration
       echo -e "\e[1;36mMenginstal txadminintegration...\e[0m"
       sleep 1
+
+      # Clone repository tema
+      git clone https://github.com/indolifemd/theme.git
+      cd theme || { echo "Gagal masuk ke direktori theme"; exit 1; }
+
+      # Pindahkan file ZIP ke direktori Pterodactyl
+      sudo mv nebulaslate2.zip /var/www/pterodactyl
+
+      # Ekstrak file tema
+      cd /var/www/pterodactyl
+      sudo unzip nebulaslate2.zip
+
+      # Memeriksa file yang telah diekstrak
+      echo "Memeriksa file tema yang telah diekstrak..."
+      ls /var/www/pterodactyl
+      
       sudo blueprint -i txadminintegration
       echo -e "\e[1;32mInstalasi txadminintegration selesai!\e[0m"
       sleep 1
@@ -222,6 +334,7 @@ menu_utama() {
       # Keluar dari skrip dengan animasi keluar
       echo -e "\e[1;31mKeluar dari skrip... Terima kasih!\e[0m"
       sleep 1
+      
       clear
       echo -e "\e[1;32mProses selesai! Sampai jumpa lagi!\e[0m"
       exit 0
