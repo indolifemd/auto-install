@@ -31,9 +31,16 @@ menu_utama() {
   echo -e "\e[1;33m    1. Install Blueprint\e[0m"
   echo -e "\e[1;33m    2. Install Tema Nebula\e[0m"
   echo -e "\e[1;33m    3. Install Tema Slate\e[0m"
-  echo -e "\e[1;31m    4. Exit\e[0m"
+  echo -e "\e[1;33m    4. Install bluetables\e[0m"
+  echo -e "\e[1;33m    5. Install darkenate\e[0m"
+  echo -e "\e[1;33m    6. Install nightadmin\e[0m"
+  echo -e "\e[1;33m    7. Install recolor\e[0m"
+  echo -e "\e[1;33m    8. Install redirect\e[0m"
+  echo -e "\e[1;33m    9. Install snowflakes\e[0m"
+  echo -e "\e[1;33m    10. Install txadminintegration\e[0m"
+  echo -e "\e[1;31m    11. Exit\e[0m"
   echo -e "\e[1;34m------------------------------------------------------------\e[0m"
-  read -p "Masukkan nomor pilihan (1-4): " pilihan
+  read -p "Masukkan nomor pilihan (1-11): " pilihan
 
   case $pilihan in
     1)
@@ -87,15 +94,15 @@ menu_utama() {
       sleep 1
 
       # Clone repository tema
-      git clone https://github.com/dadan55/IndoLife234.git
-      cd IndoLife234 || { echo "Gagal masuk ke direktori IndoLife234"; exit 1; }
+      git clone https://github.com/indolifemd/theme.git
+      cd theme || { echo "Gagal masuk ke direktori theme"; exit 1; }
 
       # Pindahkan file ZIP ke direktori Pterodactyl
-      sudo mv nebulaslate.zip /var/www/pterodactyl
+      sudo mv nebulaslate2.zip /var/www/pterodactyl
 
       # Ekstrak file tema
       cd /var/www/pterodactyl
-      sudo unzip nebulaslate.zip
+      sudo unzip nebulaslate2.zip
 
       # Memeriksa file yang telah diekstrak
       echo "Memeriksa file tema yang telah diekstrak..."
@@ -117,15 +124,15 @@ menu_utama() {
       sleep 1
 
       # Clone repository tema
-      git clone https://github.com/dadan55/IndoLife234.git
-      cd IndoLife234 || { echo "Gagal masuk ke direktori IndoLife234"; exit 1; }
+      git clone https://github.com/indolifemd/theme.git
+      cd theme || { echo "Gagal masuk ke direktori theme"; exit 1; }
 
       # Pindahkan file ZIP ke direktori Pterodactyl
-      sudo mv nebulaslate.zip /var/www/pterodactyl
+      sudo mv nebulaslate2.zip /var/www/pterodactyl
 
       # Ekstrak file tema
       cd /var/www/pterodactyl
-      sudo unzip nebulaslate.zip
+      sudo unzip nebulaslate2.zip
 
       # Memeriksa file yang telah diekstrak
       echo "Memeriksa file tema yang telah diekstrak..."
@@ -142,6 +149,76 @@ menu_utama() {
       ;;
 
     4)
+      # Install bluetables
+      echo -e "\e[1;36mMenginstal bluetables...\e[0m"
+      sleep 1
+      sudo blueprint -i bluetables
+      echo -e "\e[1;32mInstalasi bluetables selesai!\e[0m"
+      sleep 1
+      menu_utama
+      ;;
+
+    5)
+      # Install darkenate
+      echo -e "\e[1;36mMenginstal darkenate...\e[0m"
+      sleep 1
+      sudo blueprint -i darkenate
+      echo -e "\e[1;32mInstalasi darkenate selesai
+      sleep 1
+      menu_utama
+      ;;
+
+    6)
+      # Install nightadmin
+      echo -e "\e[1;36mMenginstal nightadmin...\e[0m"
+      sleep 1
+      sudo blueprint -i nightadmin
+      echo -e "\e[1;32mInstalasi nightadmin selesai!\e[0m"
+      sleep 1
+      menu_utama
+      ;;
+
+    7)
+      # Install recolor
+      echo -e "\e[1;36mMenginstal recolor...\e[0m"
+      sleep 1
+      sudo blueprint -i recolor
+      echo -e "\e[1;32mInstalasi recolor selesai!\e[0m"
+      sleep 1
+      menu_utama
+      ;;
+
+    8)
+      # Install redirect
+      echo -e "\e[1;36mMenginstal redirect...\e[0m"
+      sleep 1
+      sudo blueprint -i redirect
+      echo -e "\e[1;32mInstalasi redirect selesai!\e[0m"
+      sleep 1
+      menu_utama
+      ;;
+
+    9)
+      # Install snowflakes
+      echo -e "\e[1;36mMenginstal snowflakes...\e[0m"
+      sleep 1
+      sudo blueprint -i snowflakes
+      echo -e "\e[1;32mInstalasi snowflakes selesai!\e[0m"
+      sleep 1
+      menu_utama
+      ;;
+
+    10)
+      # Install txadminintegration
+      echo -e "\e[1;36mMenginstal txadminintegration...\e[0m"
+      sleep 1
+      sudo blueprint -i txadminintegration
+      echo -e "\e[1;32mInstalasi txadminintegration selesai!\e[0m"
+      sleep 1
+      menu_utama
+      ;;
+
+    11)
       # Keluar dari skrip dengan animasi keluar
       echo -e "\e[1;31mKeluar dari skrip... Terima kasih!\e[0m"
       sleep 1
@@ -151,8 +228,9 @@ menu_utama() {
       ;;
 
     *)
-      echo -e "\e[1;31mPilihan tidak valid. Silakan pilih antara 1-4.\e[0m"
-      exit 1
+      echo -e "\e[1;31mPilihan tidak valid. Silakan pilih antara 1-11.\e[0m"
+      sleep 1
+      menu_utama
       ;;
   esac
 }
