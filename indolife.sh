@@ -108,15 +108,15 @@ menu_utama() {
 
   case $pilihan in
     1) install_blueprint ;;
-    2) install_theme "nebulaslate" ;;
-    3) install_theme "slate" ;;
-    4) install_theme "bluetables" ;;
-    5) install_theme "darkenate" ;;
-    6) install_theme "nightadmin" ;;
-    7) install_theme "recolor" ;;
-    8) install_theme "redirect" ;;
-    9) install_theme "snowflakes" ;;
-    10) install_theme "txadminintegration" ;;
+    2) install_theme "blueprint -i nebulaslate" ;;
+    3) install_theme "blueprint -i slate" ;;
+    4) install_theme "blueprint -i bluetables" ;;
+    5) install_theme "blueprint -i darkenate" ;;
+    6) install_theme "blueprint -i nightadmin" ;;
+    7) install_theme "blueprint -i recolor" ;;
+    8) install_theme "blueprint -i redirect" ;;
+    9) install_theme "blueprint -i snowflakes" ;;
+    10) install_theme "blueprint -i txadminintegration" ;;
     11) 
       echo -e "\e[1;31mKeluar dari skrip... Terima kasih!\e[0m"
       exit 0 
