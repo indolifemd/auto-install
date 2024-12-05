@@ -88,273 +88,109 @@ menu_utama() {
       menu_utama
       ;;
 
-    2)
-      # Install Tema Nebula
-      echo -e "\e[1;36mMengunduh dan menginstal Tema Nebula...\e[0m"
-      sleep 1
+# Menampilkan header awal
+clear
+echo -e "\e[1;34m------------------------------------------------------------\e[0m"
+echo -e "\e[1;36m    Auto Install Themes from IndoLife Repository            \e[0m"
+echo -e "\e[1;34m------------------------------------------------------------\e[0m"
+sleep 1
 
-      # Clone repository tema
-      git clone https://github.com/indolifemd/theme.git
+# Variabel global
+REPO_URL="https://github.com/indolifemd/theme.git"
+WORK_DIR="/var/www/pterodactyl"
+THEME_DIR="$WORK_DIR/theme"
 
-      cd /var/www/pterodactyl
-      
-      # Pindahkan file ZIP ke direktori Pterodactyl
-      sudo mv nebula.zip /var/www/pterodactyl
-
-      # Ekstrak file tema
-      cd /var/www/pterodactyl
-      sudo unzip nebula.zip
-
-      # Memeriksa file yang telah diekstrak
-      echo "Memeriksa file tema yang telah diekstrak..."
-      ls /var/www/pterodactyl
-
-      # Instalasi tema Nebula
-      echo -e "\e[1;32mMenginstal tema Nebula...\e[0m"
-      sudo blueprint -i nebula
-
-      echo -e "\e[1;32mInstalasi tema Nebula selesai!\e[0m"
-      echo -e "\e[1;32mTerima kasih telah menggunakan skrip ini! Instalasi berhasil.\e[0m"
-      sleep 2
-      menu_utama
-      ;;
-
-    3)
-      # Install Tema Slate
-      echo -e "\e[1;36mMengunduh dan menginstal Tema Slate...\e[0m"
-      sleep 1
-
-      # Clone repository tema
-      git clone https://github.com/indolifemd/theme.git
-
-      cd /var/www/pterodactyl/theme
-      
-      # Pindahkan file ZIP ke direktori Pterodactyl
-      sudo mv slate.zip /var/www/pterodactyl
-
-      # Ekstrak file tema
-      cd /var/www/pterodactyl
-      sudo unzip slate.zip
-
-      # Memeriksa file yang telah diekstrak
-      echo "Memeriksa file tema yang telah diekstrak..."
-      ls /var/www/pterodactyl
-
-      # Instalasi tema Slate
-      echo -e "\e[1;32mMenginstal tema Slate...\e[0m"
-      sudo blueprint -i slate
-
-      echo -e "\e[1;32mInstalasi tema Slate selesai!\e[0m"
-      echo -e "\e[1;32mTerima kasih telah menggunakan skrip ini! Instalasi berhasil.\e[0m"
-      sleep 2
-      menu_utama
-      ;;
-
-    4)
-      # Install bluetables
-      echo -e "\e[1;36mMenginstal bluetables...\e[0m"
-      sleep 1
-      
-      # Clone repository tema
-      git clone https://github.com/indolifemd/theme.git
-
-      cd /var/www/pterodactyl/theme 
-      
-      # Pindahkan file ZIP ke direktori Pterodactyl
-      sudo mv bluetables.zip /var/www/pterodactyl
-
-      # Ekstrak file tema
-      cd /var/www/pterodactyl
-      sudo unzip bluetables.zip
-
-      # Memeriksa file yang telah diekstrak
-      echo "Memeriksa file tema yang telah diekstrak..."
-      ls /var/www/pterodactyl
-      
-      sudo blueprint -i bluetables
-      echo -e "\e[1;32mInstalasi bluetables selesai!\e[0m"
-      sleep 1
-      menu_utama
-      ;;
-
-    5)
-      # Install darkenate
-      echo -e "\e[1;36mMenginstal darkenate...\e[0m"
-      sleep 1
-
-      # Clone repository tema
-      git clone https://github.com/indolifemd/theme.git
-
-      cd /var/www/pterodactyl/theme 
-      
-      # Pindahkan file ZIP ke direktori Pterodactyl
-      sudo mv darkenate.zip /var/www/pterodactyl
-
-      # Ekstrak file tema
-      cd /var/www/pterodactyl
-      sudo unzip darkenate.zip
-
-      # Memeriksa file yang telah diekstrak
-      echo "Memeriksa file tema yang telah diekstrak..."
-      ls /var/www/pterodactyl/theme
-      
-      sudo blueprint -i darkenate
-      echo -e "\e[1;32mInstalasi darkenate selesai"
-      sleep 1
-      menu_utama
-      ;;
-
-    6)
-      # Install nightadmin
-      echo -e "\e[1;36mMenginstal nightadmin...\e[0m"
-      sleep 1
-      
-      # Clone repository tema
-      git clone https://github.com/indolifemd/theme.git
-
-      cd /var/www/pterodactyl/theme
-      
-      # Pindahkan file ZIP ke direktori Pterodactyl
-      sudo mv nightadmin.zip /var/www/pterodactyl
-
-      # Ekstrak file tema
-      cd /var/www/pterodactyl
-      sudo unzip nightadmin.zip
-
-      # Memeriksa file yang telah diekstrak
-      echo "Memeriksa file tema yang telah diekstrak..."
-      ls /var/www/pterodactyl
-      
-      sudo blueprint -i nightadmin
-      echo -e "\e[1;32mInstalasi nightadmin selesai!\e[0m"
-      sleep 1
-      menu_utama
-      ;;
-
-    7)
-      # Install recolor
-      echo -e "\e[1;36mMenginstal recolor...\e[0m"
-      sleep 1
-
-      # Clone repository tema
-      git clone https://github.com/indolifemd/theme.git
-
-      cd /var/www/pterodactyl/theme
-
-      # Pindahkan file ZIP ke direktori Pterodactyl
-      sudo mv recolor.zip /var/www/pterodactyl
-
-      # Ekstrak file tema
-      cd /var/www/pterodactyl
-      sudo unzip recolor.zip
-
-      # Memeriksa file yang telah diekstrak
-      echo "Memeriksa file tema yang telah diekstrak..."
-      ls /var/www/pterodactyl
-      
-      sudo blueprint -i recolor
-      echo -e "\e[1;32mInstalasi recolor selesai!\e[0m"
-      sleep 1
-      menu_utama
-      ;;
-
-    8)
-      # Install redirect
-      echo -e "\e[1;36mMenginstal redirect...\e[0m"
-      sleep 1
-
-      # Clone repository tema
-      git clone https://github.com/indolifemd/theme.git
-
-      cd /var/www/pterodactyl/theme 
-      
-      # Pindahkan file ZIP ke direktori Pterodactyl
-      sudo mv redirect.zip /var/www/pterodactyl
-
-      # Ekstrak file tema
-      cd /var/www/pterodactyl
-      sudo unzip redirect.zip
-
-      # Memeriksa file yang telah diekstrak
-      echo "Memeriksa file tema yang telah diekstrak..."
-      ls /var/www/pterodactyl
-      
-      sudo blueprint -i redirect
-      echo -e "\e[1;32mInstalasi redirect selesai!\e[0m"
-      sleep 1
-      menu_utama
-      ;;
-
-    9)
-      # Install snowflakes
-      echo -e "\e[1;36mMenginstal snowflakes...\e[0m"
-      sleep 1
-
-      # Clone repository tema
-      git clone https://github.com/indolifemd/theme.git
-
-      cd /var/www/pterodactyl/theme 
-      
-      # Pindahkan file ZIP ke direktori Pterodactyl
-      sudo mv snowflakes.zip /var/www/pterodactyl
-
-      # Ekstrak file tema
-      cd /var/www/pterodactyl
-      sudo unzip snowflakes.zip
-
-      # Memeriksa file yang telah diekstrak
-      echo "Memeriksa file tema yang telah diekstrak..."
-      ls /var/www/pterodactyl
-      
-      sudo blueprint -i snowflakes
-      echo -e "\e[1;32mInstalasi snowflakes selesai!\e[0m"
-      sleep 1
-      menu_utama
-      ;;
-
-    10)
-      # Install txadminintegration
-      echo -e "\e[1;36mMenginstal txadminintegration...\e[0m"
-      sleep 1
-
-      # Clone repository tema
-      git clone https://github.com/indolifemd/theme.git
-      cd /var/www/pterodactyl/theme 
-      
-      # Pindahkan file ZIP ke direktori Pterodactyl
-      sudo mv txadminintegration.zip /var/www/pterodactyl
-
-      # Ekstrak file tema
-      cd /var/www/pterodactyl
-      sudo unzip txadminintegration.zip
-
-      # Memeriksa file yang telah diekstrak
-      echo "Memeriksa file tema yang telah diekstrak..."
-      ls /var/www/pterodactyl
-      
-      sudo blueprint -i txadminintegration
-      echo -e "\e[1;32mInstalasi txadminintegration selesai!\e[0m"
-      sleep 1
-      menu_utama
-      ;;
-
-    11)
-      # Keluar dari skrip dengan animasi keluar
-      echo -e "\e[1;31mKeluar dari skrip... Terima kasih!\e[0m"
-      sleep 1
-      
-      clear
-      echo -e "\e[1;32mProses selesai! Sampai jumpa lagi!\e[0m"
-      exit 0
-      ;;
-
-    *)
-      echo -e "\e[1;31mPilihan tidak valid. Silakan pilih antara 1-11.\e[0m"
-      sleep 1
-      menu_utama
-      ;;
-  esac
+# Validasi direktori kerja Pterodactyl
+validate_directory() {
+  if [ ! -d "$WORK_DIR" ]; then
+    echo -e "\e[1;31mDirektori Pterodactyl ($WORK_DIR) tidak ditemukan! Pastikan Anda sudah menginstal Pterodactyl.\e[0m"
+    exit 1
+  fi
 }
 
-# Memulai menu utama
+# Unduh repository
+download_repository() {
+  if [ -d "$THEME_DIR" ]; then
+    echo -e "\e[1;33mDirektori 'theme' sudah ada. Menghapus...\e[0m"
+    sudo rm -rf "$THEME_DIR"
+  fi
+
+  echo -e "\e[1;32mMengunduh repository tema dari $REPO_URL...\e[0m"
+  git clone "$REPO_URL" "$THEME_DIR" || { echo -e "\e[1;31mGagal mengunduh repository tema.\e[0m"; exit 1; }
+}
+
+# Tampilkan daftar tema
+list_themes() {
+  FILES=$(find "$THEME_DIR" -type f -name "*.zip" | sed 's#.*/##' | sed 's/.zip$//g')
+  if [ -z "$FILES" ]; then
+    echo -e "\e[1;31mTidak ada tema ditemukan di repository.\e[0m"
+    exit 1
+  fi
+
+  echo -e "\e[1;35mDaftar tema yang tersedia:\e[0m"
+  i=1
+  for THEME in $FILES; do
+    if [ $i -le 9 ]; then
+      echo -e "\e[1;33m    $i. $THEME\e[0m"
+      THEME_LIST[$i]="$THEME"
+      ((i++))
+    fi
+  done
+  echo -e "\e[1;31m    9. Keluar\e[0m"
+  return $i
+}
+
+# Proses instalasi tema tertentu
+install_theme() {
+  local THEME_NAME=$1
+  local FILE_PATH="$THEME_DIR/$THEME_NAME.zip"
+
+  echo -e "\e[1;36mMemproses tema: $THEME_NAME\e[0m"
+
+  # Pastikan file .zip ada
+  if [ ! -f "$FILE_PATH" ]; then
+    echo -e "\e[1;31mFile $THEME_NAME.zip tidak ditemukan.\e[0m"
+    return
+  fi
+
+  # Salin file .zip ke direktori kerja
+  sudo cp "$FILE_PATH" "$WORK_DIR"
+
+  # Ekstrak file .zip
+  echo -e "\e[1;32mMengekstrak $THEME_NAME.zip...\e[0m"
+  sudo unzip -o "$WORK_DIR/$THEME_NAME.zip" -d "$WORK_DIR" || { echo -e "\e[1;31mGagal mengekstrak $THEME_NAME.zip.\e[0m"; sudo rm "$WORK_DIR/$THEME_NAME.zip"; return; }
+  sudo rm "$WORK_DIR/$THEME_NAME.zip"
+
+  # Jalankan perintah blueprint untuk menginstal tema
+  echo -e "\e[1;32mMenginstal tema $THEME_NAME dengan blueprint...\e[0m"
+  sudo blueprint -i "$THEME_NAME" || { echo -e "\e[1;31mGagal menginstal tema $THEME_NAME.\e[0m"; return; }
+
+  echo -e "\e[1;32mTema $THEME_NAME berhasil diinstal!\e[0m"
+}
+
+# Menu utama
+menu_utama() {
+  validate_directory
+  download_repository
+
+  while true; do
+    echo -e "\e[1;34m------------------------------------------------------------\e[0m"
+    echo -e "\e[1;36mPilih opsi:\e[0m"
+    list_themes
+    TOTAL_OPTIONS=$?
+
+    read -p "Masukkan nomor pilihan Anda (1-9): " PILIHAN
+
+    if [[ $PILIHAN -ge 1 && $PILIHAN -lt $TOTAL_OPTIONS ]]; then
+      install_theme "${THEME_LIST[$PILIHAN]}"
+    elif [[ $PILIHAN -eq 9 ]]; then
+      echo -e "\e[1;31mKeluar dari skrip... Terima kasih telah menggunakan!\e[0m"
+      exit 0
+    else
+      echo -e "\e[1;31mPilihan tidak valid! Silakan coba lagi.\e[0m"
+    fi
+  done
+}
+
+# Jalankan menu utama
 menu_utama
