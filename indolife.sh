@@ -1,70 +1,99 @@
 #!/bin/bash
 
-echo ">> INSTALL NODE 20 DAN KEY <<"
-sudo apt-get update
-sudo apt-get install -y ca-certificates curl gnupg
+install_blueprint() {
+    echo ">> INSTALL BLUEPRINT <<"
+    cd /var/www/pterodactyl || exit
+    yarn
+    yarn add cross-env
+    sudo apt install -y zip unzip git curl wget
 
-sudo mkdir -p /etc/apt/keyrings
-curl -fsSL https://deb.nodesource.com/gpgkey/nodesource-repo.gpg.key | sudo gpg --dearmor -o /etc/apt/keyrings/nodesource.gpg
+    wget "$(curl -s https://api.github.com/repos/BlueprintFramework/framework/releases/latest | grep 'browser_download_url' | cut -d '"' -f 4)" -O release.zip
+    sudo unzip release.zip
 
-echo "deb [signed-by=/etc/apt/keyrings/nodesource.gpg] https://deb.nodesource.com/node_20.x nodistro main" | sudo tee /etc/apt/sources.list.d/nodesource.list
+    FOLDER="/var/www/pterodactyl"
+    WEBUSER="www-data"
+    USERSHELL="/bin/bash"
+    PERMISSIONS="www-data:www-data"
 
-sudo apt-get update
-sudo apt-get install -y nodejs
+    sudo sed -i -E -e "s|WEBUSER=\"www-data\" #;|WEBUSER=\"$WEBUSER\" #;|g" \
+    -e "s|USERSHELL=\"/bin/bash\" #;|USERSHELL=\"$USERSHELL\" #;|g" \
+    -e "s|OWNERSHIP=\"www-data:www-data\" #;|OWNERSHIP=\"$PERMISSIONS\" #;|g" $FOLDER/blueprint.sh
 
-echo ">> INSTALL BLUEPRINT.ZIP BASE <<"
-cd /var/www/pterodactyl || exit
-yarn
-yarn add cross-env
-sudo apt install -y zip unzip git curl wget
+    sudo chmod +x blueprint.sh
+    sudo bash blueprint.sh
+}
 
-wget "$(curl -s https://api.github.com/repos/BlueprintFramework/framework/releases/latest | grep 'browser_download_url' | cut -d '"' -f 4)" -O release.zip
+install_theme() {
+    echo ">> INSTALL THEME <<"
+    THEME_NAME=$1
+    if [ -z "$THEME_NAME" ]; then
+        echo "Theme name required"
+        return
+    fi
+    git clone https://github.com/indolifemd/theme.git
+    cd theme || exit
+    sudo mv nebulaslate2.zip /var/www/pterodactyl
+    cd /var/www/pterodactyl || exit
+    sudo unzip nebulaslate2.zip
+    blueprint -i "$THEME_NAME"
+}
 
-sudo unzip release.zip
+show_menu() {
+    echo "Silakan pilih opsi instalasi:"
+    echo "1. Install Blueprint (wajib)"
+    echo "2. Install Theme Nebula"
+    echo "3. Install Theme Slate"
+    echo "4. Install Theme Bluetables"
+    echo "5. Install Theme Darkenate"
+    echo "6. Install Theme Nightadmin"
+    echo "7. Install Theme Recolor"
+    echo "8. Install Theme Redirect"
+    echo "9. Install Theme Snowflakes"
+    echo "10. Install Theme Txadminintegration"
+    echo "11. Kembali"
+    echo "Pilih opsi [1-11]:"
+    read -r choice
+}
 
-FOLDER="/var/www/pterodactyl"
-WEBUSER="www-data"
-USERSHELL="/bin/bash"
-PERMISSIONS="www-data:www-data"
-
-sudo sed -i -E -e "s|WEBUSER=\"www-data\" #;|WEBUSER=\"$WEBUSER\" #;|g" \
--e "s|USERSHELL=\"/bin/bash\" #;|USERSHELL=\"$USERSHELL\" #;|g" \
--e "s|OWNERSHIP=\"www-data:www-data\" #;|OWNERSHIP=\"$PERMISSIONS\" #;|g" $FOLDER/blueprint.sh
-
-sudo chmod +x blueprint.sh
-sudo bash blueprint.sh
-
-echo ">> PROSES DOWNLOAD THEME NEBULA × SLATE <<"
-git clone https://github.com/indolifemd/theme.git
-
-cd theme || exit
-sudo mv nebulaslate2.zip /var/www/pterodactyl
-
-echo ">> PROSES PENDEKSTRAKAN <<"
-cd /var/www/pterodactyl || exit
-sudo unzip nebulaslate2.zip
-
-echo ">> PROSES PENGINSTALLAN <<"
-blueprint -i nebula
-blueprint -i slate
-blueprint -i bluetables
-blueprint -i darkenate
-blueprint -i nightadmin
-blueprint -i recolor
-blueprint -i redirect
-blueprint -i snowflakes
-blueprint -i txadminintegration
-
-echo ">> INSTALASI SELESAI <<"
-echo "Silakan pilih opsi:"
-echo "1. blueprint (wajib)"
-echo "2. Nebula"
-echo "3. Slate"
-echo "4. Bluetables"
-echo "5. Darkenate"
-echo "6. Nightadmin"
-echo "7. Recolor"
-echo "8. Redirect"
-echo "9. Snowflakes"
-echo "10. txadminintegration"
-echo "11. Kembali"
+while true; do
+    show_menu
+    case $choice in
+    1)
+        install_blueprint
+        ;;
+    2)
+        install_theme "nebula"
+        ;;
+    3)
+        install_theme "slate"
+        ;;
+    4)
+        install_theme "bluetables"
+        ;;
+    5)
+        install_theme "darkenate"
+        ;;
+    6)
+        install_theme "nightadmin"
+        ;;
+    7)
+        install_theme "recolor"
+        ;;
+    8)
+        install_theme "redirect"
+        ;;
+    9)
+        install_theme "snowflakes"
+        ;;
+    10)
+        install_theme "txadminintegration"
+        ;;
+    11)
+        echo "Keluar dari program."
+        break
+        ;;
+    *)
+        echo "Pilihan tidak valid, coba lagi."
+        ;;
+    esac
+done
