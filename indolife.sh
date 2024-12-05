@@ -42,8 +42,9 @@ install_node() {
 # Fungsi untuk menginstal Blueprint.zip base
 install_blueprint() {
     echo -e "${CYAN}>> INSTALL BLUEPRINT.ZIP BASE <<${RESET}"
+    
+    cd /var/www/pterodactyl
     npm i -g yarn
-    cd /var/www/pterodactyl || exit
     yarn
     yarn add cross-env
     sudo apt install -y zip unzip git curl wget
@@ -72,10 +73,11 @@ install_theme() {
     cd /var/www/pterodactyl || exit
     if [ ! -f "nebulaslatev2.zip" ]; then
         git clone https://github.com/indolifemd/theme.git
-        cd theme || exit
+        cd theme 
         sudo mv nebulaslatev2.zip /var/www/pterodactyl
+        cd /var/www/pterodactyl
     fi
-    sudo unzip -o nebulaslate2.zip
+    sudo unzip -o nebulaslatev2.zip
     blueprint -i "$THEME_NAME"
     echo -e "${GREEN}Theme $THEME_NAME berhasil diinstal.${RESET}"
 }
