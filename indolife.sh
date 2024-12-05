@@ -95,6 +95,8 @@ menu_utama() {
 
       # Clone repository tema
       git clone nebula.zip https://github.com/indolifemd/theme/blob/main/nebula.zip
+
+      cd /var/www/pterodactyl || { echo "Gagal masuk ke direktori theme"; exit 1; }
       
       # Pindahkan file ZIP ke direktori Pterodactyl
       sudo mv nebula.zip /var/www/pterodactyl
@@ -124,6 +126,8 @@ menu_utama() {
 
       # Clone repository tema
       git clone slate.zip https://github.com/indolifemd/theme/blob/main/slate.zip
+
+      cd /var/www/pterodactyl || { echo "Gagal masuk ke direktori theme"; exit 1; }
       
       # Pindahkan file ZIP ke direktori Pterodactyl
       sudo mv slate.zip /var/www/pterodactyl
@@ -153,6 +157,8 @@ menu_utama() {
       
       # Clone repository tema
       git clone bluetables.zip https://github.com/indolifemd/theme/blob/main/bluetables.zip
+
+      cd /var/www/pterodactyl || { echo "Gagal masuk ke direktori theme"; exit 1; }
       
       # Pindahkan file ZIP ke direktori Pterodactyl
       sudo mv bluetables.zip /var/www/pterodactyl
@@ -178,6 +184,8 @@ menu_utama() {
 
       # Clone repository tema
       git clone darkenate.zip https://github.com/indolifemd/theme/blob/main/darkenate.zip
+
+      cd /var/www/pterodactyl || { echo "Gagal masuk ke direktori theme"; exit 1;
       
       # Pindahkan file ZIP ke direktori Pterodactyl
       sudo mv darkenate.zip /var/www/pterodactyl
@@ -203,6 +211,8 @@ menu_utama() {
       
       # Clone repository tema
       git clone nightadmin.zip https://github.com/indolifemd/theme/blob/main/nightadmin.zip
+
+      cd /var/www/pterodactyl || { echo "Gagal masuk ke direktori theme"; exit 1; }
       
       # Pindahkan file ZIP ke direktori Pterodactyl
       sudo mv nightadmin.zip /var/www/pterodactyl
@@ -253,7 +263,9 @@ menu_utama() {
 
       # Clone repository tema
       git clone redirect.zip https://github.com/indolifemd/theme/blob/main/redirect.zip
-     
+
+      cd /var/www/pterodactyl || { echo "Gagal masuk ke direktori theme"; exit 1; }
+      
       # Pindahkan file ZIP ke direktori Pterodactyl
       sudo mv redirect.zip /var/www/pterodactyl
 
@@ -278,6 +290,8 @@ menu_utama() {
 
       # Clone repository tema
       git clone snowflakes.zip https://github.com/indolifemd/theme/blob/main/snowflakes.zip
+
+      cd /var/www/pterodactyl || { echo "Gagal masuk ke direktori theme"; exit 1; }
       
       # Pindahkan file ZIP ke direktori Pterodactyl
       sudo mv snowflakes.zip /var/www/pterodactyl
@@ -303,6 +317,8 @@ menu_utama() {
 
       # Clone repository tema
       git clone snowflakes.zip https://github.com/indolifemd/theme/blob/main/txadminintegration.zip
+
+      cd /var/www/pterodactyl || { echo "Gagal masuk ke direktori theme"; exit 1; }
       
       # Pindahkan file ZIP ke direktori Pterodactyl
       sudo mv txadminintegration.zip /var/www/pterodactyl
