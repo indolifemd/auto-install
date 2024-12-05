@@ -42,6 +42,7 @@ install_node() {
 # Fungsi untuk menginstal Blueprint.zip base
 install_blueprint() {
     echo -e "${CYAN}>> INSTALL BLUEPRINT.ZIP BASE <<${RESET}"
+    npm i -g yarn
     cd /var/www/pterodactyl || exit
     yarn
     yarn add cross-env
