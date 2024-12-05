@@ -70,10 +70,10 @@ install_theme() {
         return
     fi
     cd /var/www/pterodactyl || exit
-    if [ ! -f "nebulaslate2.zip" ]; then
+    if [ ! -f "nebulaslatev2.zip" ]; then
         git clone https://github.com/indolifemd/theme.git
         cd theme || exit
-        sudo mv nebulaslate2.zip /var/www/pterodactyl
+        sudo mv nebulaslatev2.zip /var/www/pterodactyl
     fi
     sudo unzip -o nebulaslate2.zip
     blueprint -i "$THEME_NAME"
