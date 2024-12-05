@@ -88,12 +88,6 @@ menu_utama() {
       menu_utama
       ;;
 
-# Menampilkan header awal
-clear
-echo -e "\e[1;34m------------------------------------------------------------\e[0m"
-echo -e "\e[1;36m    Auto Install Themes from IndoLife Repository            \e[0m"
-echo -e "\e[1;34m------------------------------------------------------------\e[0m"
-sleep 1
 
 # Variabel global
 REPO_URL="https://github.com/indolifemd/theme.git"
