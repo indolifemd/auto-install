@@ -94,7 +94,7 @@ menu_utama() {
       sleep 1
 
       # Clone repository tema
-      git clone nebula.zip https://github.com/indolifemd/theme/blob/main/nebula.zip
+      git clone https://github.com/indolifemd/theme.git
 
       cd /var/www/pterodactyl
       
@@ -125,9 +125,9 @@ menu_utama() {
       sleep 1
 
       # Clone repository tema
-      git clone slate.zip https://github.com/indolifemd/theme/blob/main/slate.zip
+      git clone https://github.com/indolifemd/theme.git
 
-      cd /var/www/pterodactyl
+      cd /var/www/pterodactyl/theme
       
       # Pindahkan file ZIP ke direktori Pterodactyl
       sudo mv slate.zip /var/www/pterodactyl
@@ -156,9 +156,9 @@ menu_utama() {
       sleep 1
       
       # Clone repository tema
-      git clone bluetables.zip https://github.com/indolifemd/theme/blob/main/bluetables.zip
+      git clone https://github.com/indolifemd/theme.git
 
-      cd /var/www/pterodactyl 
+      cd /var/www/pterodactyl/theme 
       
       # Pindahkan file ZIP ke direktori Pterodactyl
       sudo mv bluetables.zip /var/www/pterodactyl
@@ -183,9 +183,9 @@ menu_utama() {
       sleep 1
 
       # Clone repository tema
-      git clone darkenate.zip https://github.com/indolifemd/theme/blob/main/darkenate.zip
+      git clone https://github.com/indolifemd/theme.git
 
-      cd /var/www/pterodactyl 
+      cd /var/www/pterodactyl/theme 
       
       # Pindahkan file ZIP ke direktori Pterodactyl
       sudo mv darkenate.zip /var/www/pterodactyl
@@ -196,7 +196,7 @@ menu_utama() {
 
       # Memeriksa file yang telah diekstrak
       echo "Memeriksa file tema yang telah diekstrak..."
-      ls /var/www/pterodactyl
+      ls /var/www/pterodactyl/theme
       
       sudo blueprint -i darkenate
       echo -e "\e[1;32mInstalasi darkenate selesai"
@@ -210,9 +210,9 @@ menu_utama() {
       sleep 1
       
       # Clone repository tema
-      git clone nightadmin.zip https://github.com/indolifemd/theme/blob/main/nightadmin.zip
+      git clone https://github.com/indolifemd/theme.git
 
-      cd /var/www/pterodactyl
+      cd /var/www/pterodactyl/theme
       
       # Pindahkan file ZIP ke direktori Pterodactyl
       sudo mv nightadmin.zip /var/www/pterodactyl
@@ -237,9 +237,9 @@ menu_utama() {
       sleep 1
 
       # Clone repository tema
-      git clone recolor.zip https://github.com/indolifemd/theme/blob/main/recolor.zip  
+      git clone https://github.com/indolifemd/theme.git
 
-      cd /var/www/pterodactyl
+      cd /var/www/pterodactyl/theme
 
       # Pindahkan file ZIP ke direktori Pterodactyl
       sudo mv recolor.zip /var/www/pterodactyl
@@ -264,9 +264,9 @@ menu_utama() {
       sleep 1
 
       # Clone repository tema
-      git clone redirect.zip https://github.com/indolifemd/theme/blob/main/redirect.zip
+      git clone https://github.com/indolifemd/theme.git
 
-      cd /var/www/pterodactyl 
+      cd /var/www/pterodactyl/theme 
       
       # Pindahkan file ZIP ke direktori Pterodactyl
       sudo mv redirect.zip /var/www/pterodactyl
@@ -291,9 +291,9 @@ menu_utama() {
       sleep 1
 
       # Clone repository tema
-      git clone snowflakes.zip https://github.com/indolifemd/theme/blob/main/snowflakes.zip
+      git clone https://github.com/indolifemd/theme.git
 
-      cd /var/www/pterodactyl 
+      cd /var/www/pterodactyl/theme 
       
       # Pindahkan file ZIP ke direktori Pterodactyl
       sudo mv snowflakes.zip /var/www/pterodactyl
@@ -318,9 +318,8 @@ menu_utama() {
       sleep 1
 
       # Clone repository tema
-      git clone snowflakes.zip https://github.com/indolifemd/theme/blob/main/txadminintegration.zip
-
-      cd /var/www/pterodactyl 
+      git clone https://github.com/indolifemd/theme.git
+      cd /var/www/pterodactyl/theme 
       
       # Pindahkan file ZIP ke direktori Pterodactyl
       sudo mv txadminintegration.zip /var/www/pterodactyl
